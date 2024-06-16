@@ -1,7 +1,9 @@
 import { Mail } from "lucide-react"
 
 import { SettingsTabs } from "@/components/SettingsTabs"
-import Input from "@/components/Input"
+import Input from "@/components/Form/Input"
+import Select from "@/components/Form/Select"
+import { SelectItem } from "@/components/Form/Select/SelectItem"
 import * as FileInput from "@/components/Form/FileInput"
 
 export default function Home() {
@@ -59,7 +61,7 @@ export default function Home() {
             <label htmlFor="email" className="text-sm font-medium text-zinc-700">
               Email address
             </label>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid-cols grid gap-6">
               <Input.Root>
                 <Input.Prefix>
                   <Mail className="h-5 w-5 text-zinc-500" />
@@ -72,7 +74,6 @@ export default function Home() {
                 />
               </Input.Root>
             </div>
-            <div />
           </div>
 
           {/* YOUR PHOTO */}
@@ -96,7 +97,7 @@ export default function Home() {
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid-cols grid gap-6">
               <Input.Root>
                 <Input.Control id="role" defaultValue="Developer" />
               </Input.Root>
@@ -109,7 +110,22 @@ export default function Home() {
             <label htmlFor="country" className="text-sm font-medium text-zinc-700">
               Country
             </label>
-            <div className="grid grid-cols-2 gap-6">SELECT</div>
+
+            <Select placeholder="Select a country...">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="us" text="United States" />
+            </Select>
+          </div>
+
+          {/* TIMEZONE */}
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">
+              Timezone
+            </label>
+            <Select placeholder="Select a timezone...">
+              <SelectItem value="utc8" text="Pacific Standard Time (UTC-08:00)" />
+              <SelectItem value="utc3" text="America São Paulo (UTC-03:00)" />
+            </Select>
             <div />
           </div>
 
