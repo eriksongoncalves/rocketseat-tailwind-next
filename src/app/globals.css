@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overscroll-behavior: none;
+}
+
+.dark {
+  background-color: #18181b;
+}
+
 .customScroll {
   scrollbar-width: thin;
   scrollbar-color: #f4f4f5 #fff;
@@ -16,4 +24,20 @@
   background-color: #fff;
   border-radius: 14px;
   border: 3px solid #f4f4f5;
+}
+
+.dark .customScroll {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a #18181b;
+}
+
+.dark .customScroll::-webkit-scrollbar-track {
+  background: #27272a;
+  border-radius: 5px;
+}
+
+.dark .customScroll::-webkit-scrollbar-thumb {
+  background-color: #18181b;
+  border-radius: 14px;
+  border: 3px solid #27272a;
 }

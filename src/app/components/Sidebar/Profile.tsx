@@ -11,8 +11,10 @@ export function Profile() {
       />
 
       <div className="flex flex-col">
-        <span className="text-sm font-semibold text-zinc-700">Erikson Gonçalves</span>
-        <span className="max-w-[190px] truncate text-sm text-zinc-500">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
+          Erikson Gonçalves
+        </span>
+        <span className="max-w-[190px] truncate text-sm text-zinc-500 dark:text-zinc-400">
           eriksongoncalves@yahoo.com.br
         </span>
       </div>
